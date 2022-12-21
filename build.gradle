@@ -9,8 +9,15 @@ repositories {
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
+
 dependencies {
-    testImplementation()
+ testImplementation(
+         "com.codeborne:selenide:6.9.0",
+         "org.junit.jupiter:junit-jupiter:5.8.2"
+ )
+}
+test {
+    useJUnitPlatform()
 }
 
 help {
@@ -18,7 +25,7 @@ help {
         println ""
         println "************************************************************************ "
         println "***                                                                  *** "
-        println "*** Welcome to https://github.com/22breakup/demoqa-test-1!             *** "
+        println "*** Welcome to https://github.com/22breakup/demoqa-test-1!    *** "
         println "***                                                                  *** "
         println "*** ./gradlew help                                                  *** "
         println "***                                                                  *** "
